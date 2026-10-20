@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu dropdown dọc</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+
+    #menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #menu li {
+      position: relative;
+      width: 100px;
+      height: 30px;
+      padding: 0 20px;
+      box-sizing: content-box;
+      background-color: #000;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    #menu li:hover,
+    #menu li:focus-within {
+      background-color: #444;
+    }
+
+    #menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    #menu a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    #menu li > ul {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      visibility: hidden;
+    }
+
+    #menu li:hover > ul,
+    #menu li:focus-within > ul {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menu dropdown dọc</h1>
+  <nav id="menu" aria-label="Menu chính">
+    <ul>
+      <li><a href="#trang-chu">Trang chủ</a></li>
+      <li>
+        <a href="#san-pham">Sản phẩm</a>
+        <ul>
+          <li><a href="#may-tinh">Máy tính</a></li>
+          <li><a href="#dien-thoai">Điện thoại</a></li>
+          <li><a href="#phu-kien">Phụ kiện</a></li>
+        </ul>
+      </li>
+      <li><a href="#gioi-thieu">Giới thiệu</a></li>
+      <li><a href="#lien-he">Liên hệ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
